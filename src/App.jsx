@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <>
+    <div className="app">
       <Router>
         <Header />
         <Routes>
@@ -19,7 +19,7 @@ const App = () => {
         <Sidebar />
         <Footer />
       </Router>
-    </>
+    </div>
   );
 };
 
