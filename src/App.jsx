@@ -7,7 +7,7 @@ import Header from "./components/Header";
 import Sidebar from "./components/Sidebar";
 import Footer from "./components/Footer";
 
-function App() {
+const App = () => {
   return (
     <>
       <Router>
@@ -21,6 +21,6 @@ function App() {
       </Router>
     </>
   );
-}
+};
 
 export default App;
