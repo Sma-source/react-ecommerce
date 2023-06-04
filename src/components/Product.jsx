@@ -1,7 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+// import cart context
+import { CartContext } from "../context/CartContext";
 
 const Product = ({ product }) => {
+  const { addToCart } = useContext(CartContext);
   // console.log(product);
   const { id, title, image, category, price } = product;
 
@@ -29,13 +32,14 @@ const Product = ({ product }) => {
           <p className="relative text-lg font-semibold text-white">{price}$</p>
         </div>
       </div>
-      <div className="mt-6">
-        <a
+      <div className="mt-6 flex items-center justify-center">
+        <button
+          onClick={() => addToCart(product, id)}
           type="button"
-          className="relative flex bg-gray-100 border border-transparent rounded-md py-2 px-8 items-center justify-center text-sm font-medium text-gray-900 hover:bg-gray-200"
+          className="relative cursor-pointer w-full flex bg-gray-100 border border-transparent rounded-md py-2 px-8 items-center justify-center text-sm font-medium text-gray-900 hover:bg-gray-200"
         >
           Add to bag<span className="sr-only">, {title}</span>
-        </a>
+        </button>
       </div>
     </div>
   );
