@@ -12,7 +12,7 @@ import { CartContext } from "../context/CartContext";
 
 const Sidebar = () => {
   const { isOpen, handleClose } = useContext(SidebarContext);
-  const { cart } = useContext(CartContext);
+  const { cart, clearCart } = useContext(CartContext);
   return (
     <div
       className={`${
@@ -43,7 +43,10 @@ const Sidebar = () => {
             <span>Total:</span>$ 1000
           </div>
           {/* clear cart icon */}
-          <div className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl">
+          <div
+            onClick={clearCart}
+            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center text-xl"
+          >
             <FiTrash2 />
           </div>
         </div>
