@@ -1,6 +1,6 @@
 import React, { useState, createContext } from "react";
 // create context
-const SidebarContext = createContext();
+export const SidebarContext = createContext();
 
 const SidebarProvider = ({ children }) => {
   // sidebar state
