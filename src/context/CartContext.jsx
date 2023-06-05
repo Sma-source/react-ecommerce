@@ -6,6 +6,8 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
   //cart state
   const [cart, setCart] = useState([]);
+  //item amount state
+  const [itemAmount, setItemAmount] = useState(0);
   // add to cart function
   const addToCart = (product, id) => {
     const newItem = { ...product, amount: 1 };
@@ -72,6 +74,7 @@ const CartProvider = ({ children }) => {
     <CartContext.Provider
       value={{
         cart,
+        itemAmount,
         addToCart,
         removeFromCart,
         clearCart,
