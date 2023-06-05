@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import { SidebarContext } from "../context/SidebarContext";
 import { CartContext } from "../context/CartContext";
 // import icons
@@ -8,10 +8,21 @@ import { Link } from "react-router-dom";
 import Logo from "../assets/react.svg";
 
 const Header = () => {
+  const [isActive, setIsActive] = useState(false);
   const { isOpen, setIsOpen } = useContext(SidebarContext);
   const { itemAmount } = useContext(CartContext);
+  // event listener
+  useEffect(() => {
+    window.addEventListener("scroll", () => {
+      window.scrollY > 60 ? setIsActive(true) : setIsActive(false);
+    });
+  });
   return (
-    <header className="bg-pink-200">
+    <header
+      className={`${
+        isActive ? "bg-white py-4 shadow-md" : "bg-none py-6"
+      } fixed w-full z-10 transition-all `}
+    >
       <div className="container mx-auto flex items-center justify-between h-full">
         <Link to={"/"}>
           <div>
