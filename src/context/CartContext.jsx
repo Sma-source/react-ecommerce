@@ -8,6 +8,8 @@ const CartProvider = ({ children }) => {
   const [cart, setCart] = useState([]);
   //item amount state
   const [itemAmount, setItemAmount] = useState(0);
+  // total price state
+  const [total, setTotal] = useState(0);
 
   // update item amount
   useEffect(() => {
@@ -86,6 +88,7 @@ const CartProvider = ({ children }) => {
       value={{
         cart,
         itemAmount,
+        total,
         addToCart,
         removeFromCart,
         clearCart,
