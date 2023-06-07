@@ -5,7 +5,7 @@ import { CartContext } from "../context/CartContext";
 import { BsBag } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-import Logo from "../assets/react.svg";
+import Logo from "../assets/logo.svg";
 import Banner from "./Banner";
 
 const Header = () => {
@@ -39,7 +39,7 @@ const Header = () => {
           >
             <BsBag className="text-2xl" />
             <div
-              className="bg-red-500 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px]
+              className="bg-indigo-600 absolute -right-2 -bottom-2 text-[12px] w-[18px] h-[18px]
         text-white rounded-full flex justify-center items-center"
             >
               {itemAmount}{" "}
