@@ -4,6 +4,8 @@ import React, { useContext } from "react";
 import { ProductContext } from "../context/ProductContext";
 import Product from "../components/Product";
 import Hero from "../components/Hero";
+import Incentive from "../components/Incentive";
+import Reviews from "../components/Reviews";
 
 const Home = () => {
   // get products from product context
@@ -21,12 +23,14 @@ const Home = () => {
     <>
       <Hero />
       <section className="mx-auto">
+        <Incentive />
         <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
           <div className="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 xl:gap-x-8">
             {filterProducts.map((product) => {
               return <Product key={product.id} product={product} />;
             })}
           </div>
+          <Reviews />
         </div>
       </section>
     </>
