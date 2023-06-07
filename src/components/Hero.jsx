@@ -1,7 +1,7 @@
 import React from "react";
-import woman from "../assets/woman2.png";
+
+import heroImg from "../assets/fashion.jpg";
 import { Link } from "react-router-dom";
-import Banner from "./Banner";
 
 const Hero = () => {
   const offers = [
@@ -103,8 +103,8 @@ const Hero = () => {
             </div>
             <div className="w-full h-48 sm:h-64 lg:absolute lg:top-0 lg:right-0 lg:w-1/2 lg:h-full">
               <img
-                src="src/assets/fashion.jpg"
-                alt=""
+                src={heroImg}
+                alt="fashion shop"
                 className="w-full h-full object-center object-cover"
               />
             </div>
