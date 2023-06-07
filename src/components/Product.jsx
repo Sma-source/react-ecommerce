@@ -20,7 +20,9 @@ const Product = ({ product }) => {
         </div>
         <div className="relative mt-4">
           <Link to={`product/${id}`}>
-            <h3 className="text-sm font-medium text-gray-900">{title}</h3>
+            <h3 className="text-sm font-medium text-gray-900 min-h-[39px]">
+              {title}
+            </h3>
           </Link>
           <p className="mt-1 text-sm text-gray-500">{category}</p>
         </div>
@@ -36,7 +38,7 @@ const Product = ({ product }) => {
         <button
           onClick={() => addToCart(product, id)}
           type="button"
-          className="relative cursor-pointer w-full flex bg-[#F5E6E0] border border-transparent rounded-md py-2 px-8 items-center justify-center text-sm font-medium text-gray-900 hover:bg-gray-600 hover:text-white"
+          className="relative cursor-pointer w-full flex  bg-indigo-600 border border-transparent rounded-md py-2 px-8 items-center justify-center text-base font-medium text-white hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-indigo-500"
         >
           Add to bag<span className="sr-only">, {title}</span>
         </button>
