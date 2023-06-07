@@ -91,7 +91,7 @@ const Hero = () => {
                     </p>
                     <div className="mt-6">
                       <a
-                        href="#"
+                        href="#product"
                         className="inline-block bg-indigo-600 border border-transparent py-3 px-8 rounded-md font-medium text-white hover:bg-indigo-700"
                       >
                         Shop Now!
